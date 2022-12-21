@@ -1,11 +1,14 @@
 package br.com.mildevs.pecas.api.SistemadePecas.controller;
 
 import br.com.mildevs.pecas.api.SistemadePecas.entity.Peca;
+import br.com.mildevs.pecas.api.SistemadePecas.exceptions.ErroDeNegocioException;
 import br.com.mildevs.pecas.api.SistemadePecas.service.PecaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 
@@ -18,7 +21,7 @@ public class PecaController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public boolean inserePeca(@RequestBody Peca peca){
+    public boolean inserePeca(@RequestBody @Valid Peca peca) throws ErroDeNegocioException {
         return pecaService.inserePeca(peca);
     }
 

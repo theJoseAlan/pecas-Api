@@ -1,15 +1,22 @@
 package br.com.mildevs.pecas.api.SistemadePecas.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+//Essa é a entidade com os atributos do objeto
 
 @Entity
 public class Peca {
     @Id
     private Long codBarras;
 
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     @Column(nullable = false)
+    @NotBlank
     private String nome;
 
     @Column(nullable = false)
@@ -18,14 +25,17 @@ public class Peca {
     @Column(nullable = false)
     private String fabricante;
 
+    @NotNull(message = "Preco de custo não pode ser nulo")
     @Column(name = "preco_de_custo", nullable = false)
-    private double precoDeCusto;
+    private Double precoDeCusto;
 
+    @NotNull(message = "Preco de venda não pode ser nulo")
     @Column(name = "preco_de_venda", nullable = false)
-    private double precoDeVenda;
+    private Double precoDeVenda;
 
     @Column(name = "qtde_estoque", nullable = false)
     private int qtdeEstoque;
+
 
     @Column(nullable = false)
     private String categoria;
@@ -35,8 +45,8 @@ public class Peca {
     }
 
     public Peca(Long codBarras, String nome, String modelo,
-                String fabricante, double precoDeCusto,
-                double precoDeVenda, int qtdeEstoque,
+                String fabricante, Double precoDeCusto,
+                Double precoDeVenda, int qtdeEstoque,
                 String categoria) {
 
         this.codBarras = codBarras;
@@ -81,19 +91,19 @@ public class Peca {
         this.fabricante = fabricante;
     }
 
-    public double getPrecoDeCusto() {
+    public Double getPrecoDeCusto() {
         return precoDeCusto;
     }
 
-    public void setPrecoDeCusto(double precoDeCusto) {
+    public void setPrecoDeCusto(Double precoDeCusto) {
         this.precoDeCusto = precoDeCusto;
     }
 
-    public double getPrecoDeVenda() {
+    public Double getPrecoDeVenda() {
         return precoDeVenda;
     }
 
-    public void setPrecoDeVenda(double precoDeVenda) {
+    public void setPrecoDeVenda(Double precoDeVenda) {
         this.precoDeVenda = precoDeVenda;
     }
 
@@ -111,5 +121,13 @@ public class Peca {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
