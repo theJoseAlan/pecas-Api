@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_8_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/dto/CriaPecaDTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/dto/ErroValidacaoResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/dto/ResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/exceptions/ErroDeNegocioException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/entity/Peca.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/entity/Peca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
