@@ -4,19 +4,22 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.io.Serial;
+
 //Essa é a entidade com os atributos do objeto
 
 @Entity
 public class Peca {
-    @Id
-    private Long codBarras;
 
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Id
     @Column(nullable = false)
-    @NotBlank
+    private Long codBarras;
+
+    @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)
@@ -25,11 +28,9 @@ public class Peca {
     @Column(nullable = false)
     private String fabricante;
 
-    @NotNull(message = "Preco de custo não pode ser nulo")
     @Column(name = "preco_de_custo", nullable = false)
     private Double precoDeCusto;
 
-    @NotNull(message = "Preco de venda não pode ser nulo")
     @Column(name = "preco_de_venda", nullable = false)
     private Double precoDeVenda;
 
@@ -44,7 +45,7 @@ public class Peca {
 
     }
 
-    public Peca(Long codBarras, String nome, String modelo,
+    public Peca(int id, Long codBarras, String nome, String modelo,
                 String fabricante, Double precoDeCusto,
                 Double precoDeVenda, int qtdeEstoque,
                 String categoria) {

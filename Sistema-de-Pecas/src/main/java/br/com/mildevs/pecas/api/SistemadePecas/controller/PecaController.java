@@ -1,5 +1,6 @@
 package br.com.mildevs.pecas.api.SistemadePecas.controller;
 
+import br.com.mildevs.pecas.api.SistemadePecas.dto.CriaPecaDTo;
 import br.com.mildevs.pecas.api.SistemadePecas.entity.Peca;
 import br.com.mildevs.pecas.api.SistemadePecas.exceptions.ErroDeNegocioException;
 import br.com.mildevs.pecas.api.SistemadePecas.service.PecaService;
@@ -21,7 +22,7 @@ public class PecaController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public boolean inserePeca(@RequestBody @Valid Peca peca) throws ErroDeNegocioException {
+    public boolean inserePeca(@RequestBody @Valid CriaPecaDTo peca) throws ErroDeNegocioException {
         return pecaService.inserePeca(peca);
     }
 

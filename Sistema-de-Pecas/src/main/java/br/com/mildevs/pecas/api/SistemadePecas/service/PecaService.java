@@ -1,8 +1,10 @@
 package br.com.mildevs.pecas.api.SistemadePecas.service;
 
+import br.com.mildevs.pecas.api.SistemadePecas.dto.CriaPecaDTo;
 import br.com.mildevs.pecas.api.SistemadePecas.entity.Peca;
 import br.com.mildevs.pecas.api.SistemadePecas.exceptions.ErroDeNegocioException;
 import br.com.mildevs.pecas.api.SistemadePecas.repository.PecaRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,10 +21,10 @@ public class PecaService {
     PecaRepository pecaRepository;
 
     //Create
-    public boolean inserePeca(Peca peca) throws ErroDeNegocioException {
-        if(pecaRepository.existsById(peca.getCodBarras())){
-            throw new ErroDeNegocioException("Já existe uma peça com esse códido de barras");
-        }
+    public boolean inserePeca(CriaPecaDTo pecaDTo) throws ErroDeNegocioException {
+
+        Peca peca = new Peca();
+        BeanUtils.copyProperties(pecaDTo, peca);
 
         pecaRepository.save(peca);
 
