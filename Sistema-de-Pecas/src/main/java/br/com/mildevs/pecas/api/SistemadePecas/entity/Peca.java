@@ -13,11 +13,12 @@ public class Peca {
 
 
     @Column
-    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
 
     @Column(nullable = false, unique = true)
+    @Id
     private Long codBarras;
 
     @Column(nullable = false)
