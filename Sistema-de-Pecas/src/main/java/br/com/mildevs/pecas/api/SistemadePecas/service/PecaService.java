@@ -43,6 +43,19 @@ public class PecaService {
         return pecaDb.get();
     }
 
+    /*public Peca consultaPecaPorModelo(String modelo){
+        List<Peca> pecaNoDb = pecaRepository.findBymodelo(modelo);
+
+        if(pecaNoDb.isEmpty()){
+            return null;
+        }
+
+        for (Peca peca : pecaNoDb){
+            pecaNoDb.add(peca);
+        }
+        return pecaNo;
+    }*/
+
     public List<Peca> listaPecas(){
         return pecaRepository.findAll();
     }
