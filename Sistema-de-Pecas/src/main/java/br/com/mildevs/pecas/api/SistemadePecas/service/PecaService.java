@@ -33,7 +33,8 @@ public class PecaService {
 
     //Read
     public Peca consultaPeca(Long codBarras){
-        Optional<Peca> pecaDb = pecaRepository.findById(codBarras);
+        Optional<Peca> pecaDb = pecaRepository.findBycodBarras(codBarras);
+                //findById(codBarras);
 
         if(pecaDb.isEmpty()){
             return null;
