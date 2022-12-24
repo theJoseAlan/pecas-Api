@@ -14,9 +14,7 @@ public class CriaPecaDTo {
     @Id
     private Long codBarras;
 
-    /*
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;*/
+    private int id;
 
     @NotBlank
     private String nome;
@@ -42,7 +40,7 @@ public class CriaPecaDTo {
     private String categoria;
 
 
-    public CriaPecaDTo(Long codBarras, String nome, String modelo,
+    public CriaPecaDTo(int id, Long codBarras, String nome, String modelo,
                        String fabricante, Double precoDeCusto,
                        Double precoDeVenda, int qtdeEstoque,
                        String categoria) {
@@ -54,6 +52,7 @@ public class CriaPecaDTo {
         this.precoDeVenda = precoDeVenda;
         this.qtdeEstoque = qtdeEstoque;
         this.categoria = categoria;
+        this.id = id;
     }
 
     public Peca toEntity(){
@@ -124,5 +123,13 @@ public class CriaPecaDTo {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

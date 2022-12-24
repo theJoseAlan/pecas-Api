@@ -11,8 +11,8 @@ import java.io.Serial;
 @Entity
 public class Peca {
 
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
 
     @Id
