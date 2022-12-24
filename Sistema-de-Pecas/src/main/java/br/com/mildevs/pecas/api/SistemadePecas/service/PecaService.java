@@ -46,6 +46,7 @@ public class PecaService {
     public List<Peca> listaPecas(){
         return pecaRepository.findAll();
     }
+
     //Update
     public boolean alteraPeca(Peca peca){
         if(!pecaRepository.existsById(peca.getCodBarras())){
