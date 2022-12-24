@@ -24,12 +24,13 @@
 
 
 ## ⚙️ Operações
-* Criar, Listar todos os cadastros, Colsultar a partir do Id (codBarras), Remover.
+* Criar, Listar todos os cadastros, Colsultar, Remover.
 
 * Observações: 
 1. Não insira letras no código de barras, (ainda) não há tratativa de erro para isso
 2. Não é possível prosseguir com dados nulos (para numericos) ou em branco (para strings)
 3. Não é possível criar duas peças com códigos de barra iguais
+4. É possível consultar ou remover um registro usando o código de barras
 
 __obs: O que ficou a desejar será implementado posteriormente (está assim devido ao limite de tempo da entrega)__
 
