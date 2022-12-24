@@ -20,7 +20,7 @@
 ## ⭐ Breve descrição
 * O sistema possui uma entidade com os seguintes atributos:
 - 🗜 Peça -> id (int / generatedValue); codBarras (Long, id); nome (String); modelo (do veiculo) (String);
-            fabricante (String); precoDeCusto (Double); precoDeVenda (Double); qtdeEstoque (int);
+            fabricante (String); precoDeCusto (Double); precoDeVenda (Double); qtdeEstoque (int); categoria (String);
 
 
 ## ⚙️ Operações
