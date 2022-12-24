@@ -2,7 +2,10 @@ package br.com.mildevs.pecas.api.SistemadePecas.exceptions;
 
 import br.com.mildevs.pecas.api.SistemadePecas.dto.ErroValidacaoResponseDTO;
 import br.com.mildevs.pecas.api.SistemadePecas.dto.ResponseDTO;
+import org.springframework.beans.factory.BeanCreationException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -44,6 +47,27 @@ public class GlobalExceptionHandler {
         //O JSON no postman vai mostrar o o campo (atributo) e o erro relacionado a ele
         //Falicita muito a vida de quem vai sonsumir a API
         return resposta;
+    }
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler({DataIntegrityViolationException.class})
+    public @ResponseBody String erroUnique(DataIntegrityViolationException errod){
+
+        String messa = "Já existe um produto com esse código de barras";
+
+        return messa;
+
+    }
+    //
+
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler({HttpMessageNotReadableException.class})
+    public @ResponseBody String erroValidacao(DataIntegrityViolationException errod){
+
+        String messa = "Digite os valores correspondentes aos campos";
+
+        return messa;
+
     }
 
 }

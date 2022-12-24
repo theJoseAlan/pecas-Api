@@ -11,12 +11,13 @@ import java.io.Serial;
 @Entity
 public class Peca {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column
+    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Id
-    @Column(nullable = false)
+
+    @Column(nullable = false, unique = true)
     private Long codBarras;
 
     @Column(nullable = false)

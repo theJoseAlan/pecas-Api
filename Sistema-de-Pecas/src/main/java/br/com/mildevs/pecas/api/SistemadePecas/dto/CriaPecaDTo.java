@@ -11,9 +11,10 @@ import org.springframework.beans.BeanUtils;
 
 public class CriaPecaDTo {
 
-    @Id
+
     private Long codBarras;
 
+    @Id
     private int id;
 
     @NotBlank
