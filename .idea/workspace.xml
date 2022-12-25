@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" afterDir="false" />
-    </list>
+    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
