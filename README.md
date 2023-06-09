@@ -24,10 +24,11 @@
 
 
 ## ⚙️ Operações
-* Criar, Listar todos os cadastros, Colsultar, Remover.
+* Criar, Listar todos os cadastros, Consultar, Remover.
 
 * Observações: 
 1. Não insira letras no código de barras, (ainda) não há tratativa de erro para isso
 2. Não é possível prosseguir com dados nulos (para numericos) ou em branco (para strings)
 3. Não é possível criar duas peças com códigos de barra iguais
 4. É possível consultar ou remover um registro usando o código de barras
+5. É possível pesquisar uma peça pelo modelo do carro
