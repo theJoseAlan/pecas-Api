@@ -33,7 +33,8 @@ public class PecaService {
 
     //Read
     public Peca consultaPeca(Long codBarras){
-        Optional<Peca> pecaDb = pecaRepository.findById(codBarras);
+        Optional<Peca> pecaDb = pecaRepository.findBycodBarras(codBarras);
+                //findById(codBarras);
 
         if(pecaDb.isEmpty()){
             return null;
@@ -42,9 +43,23 @@ public class PecaService {
         return pecaDb.get();
     }
 
+    /*public Peca consultaPecaPorModelo(String modelo){
+        List<Peca> pecaNoDb = pecaRepository.findBymodelo(modelo);
+
+        if(pecaNoDb.isEmpty()){
+            return null;
+        }
+
+        for (Peca peca : pecaNoDb){
+            pecaNoDb.add(peca);
+        }
+        return pecaNo;
+    }*/
+
     public List<Peca> listaPecas(){
         return pecaRepository.findAll();
     }
+
     //Update
     public boolean alteraPeca(Peca peca){
         if(!pecaRepository.existsById(peca.getCodBarras())){

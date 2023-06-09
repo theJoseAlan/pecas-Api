@@ -13,7 +13,7 @@ public class Peca {
 
 
     @Column
-    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
 
