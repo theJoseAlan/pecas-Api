@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/pecas")
@@ -22,7 +23,7 @@ public class PecaController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public boolean inserePeca(@RequestBody @Valid CriaPecaDTo peca) throws ErroDeNegocioException {
+    public Object inserePeca(@RequestBody @Valid CriaPecaDTo peca) throws ErroDeNegocioException {
         return pecaService.inserePeca(peca);
     }
 
@@ -33,13 +34,13 @@ public class PecaController {
     }
 
     //Buscando por modelo de carro
-    /*@GetMapping(path = "/{modelo}/modelo", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Peca buscaPecaPorModelo(@PathVariable String modelo){
+    @GetMapping(path = "modelo/{modelo}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Optional<Peca> buscaPecaPorModelo(@PathVariable String modelo){
         return pecaService.consultaPecaPorModelo(modelo);
-    }*/
+    }
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Peca> buscaPeca(){
+    public List<Peca> listaPeca(){
         return pecaService.listaPecas();
     }
 

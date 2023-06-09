@@ -21,14 +21,13 @@ public class PecaService {
     PecaRepository pecaRepository;
 
     //Create
-    public boolean inserePeca(CriaPecaDTo pecaDTo) throws ErroDeNegocioException {
+    public Object inserePeca(CriaPecaDTo pecaDTo) throws ErroDeNegocioException {
 
         Peca peca = new Peca();
         BeanUtils.copyProperties(pecaDTo, peca);
 
-        pecaRepository.save(peca);
+       return pecaRepository.save(peca);
 
-        return true;
     }
 
     //Read
@@ -43,18 +42,9 @@ public class PecaService {
         return pecaDb.get();
     }
 
-    /*public Peca consultaPecaPorModelo(String modelo){
-        List<Peca> pecaNoDb = pecaRepository.findBymodelo(modelo);
-
-        if(pecaNoDb.isEmpty()){
-            return null;
-        }
-
-        for (Peca peca : pecaNoDb){
-            pecaNoDb.add(peca);
-        }
-        return pecaNo;
-    }*/
+    public Optional<Peca> consultaPecaPorModelo(String modelo){
+        return Optional.of(pecaRepository.findByModelo(modelo).get());
+    }
 
     public List<Peca> listaPecas(){
         return pecaRepository.findAll();

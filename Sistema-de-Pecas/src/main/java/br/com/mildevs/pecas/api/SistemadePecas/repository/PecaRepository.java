@@ -17,6 +17,6 @@ public interface PecaRepository extends JpaRepository<Peca, Long> {
 
     Optional<Peca> findBycodBarras(Long codBarras);
 
-    /*List<Peca> findBymodelo(String modelo);*/
+    Optional<Peca> findByModelo(String modelo);
 
 }
