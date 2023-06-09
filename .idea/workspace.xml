@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="" />
+    <list default="true" id="af0816df-eac4-452d-8903-17e2cb9877fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/repository/PecaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,20 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,14 +49,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jose Alan/Desktop/Sistema-de-Pecas&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Jose Alan/Desktop/Sistema-de-Pecas",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="SistemaDePecasApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.mildevs.pecas.api.SistemadePecas.SistemaDePecasApplication" />
