@@ -7,6 +7,7 @@ import br.com.mildevs.pecas.api.SistemadePecas.repository.PecaRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -61,9 +62,11 @@ public class PecaService {
     }
 
     //Delete
+    @Transactional
     public boolean removePeca(Long codBarras){
 
         if(!pecaRepository.existsByCodBarras(codBarras)){
+            System.out.println("Caiu aqui");
             return false;
         }
 

@@ -45,8 +45,13 @@ public class PecaController {
     }
 
     @DeleteMapping(path = "/{codBarras}")
-    public boolean removePeca(@PathVariable Long codBarras){
-        return pecaService.removePeca(codBarras);
+    public String removePeca(@PathVariable Long codBarras){
+
+        if(pecaService.removePeca(codBarras)){
+            return "Peça deletada";
+        }
+
+        return "Peça não encontrada";
     }
 
 }
