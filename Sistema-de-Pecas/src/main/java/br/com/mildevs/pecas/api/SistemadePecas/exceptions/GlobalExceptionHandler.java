@@ -58,7 +58,6 @@ public class GlobalExceptionHandler {
         return messa;
 
     }
-    //
 
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler({HttpMessageNotReadableException.class})

@@ -7,15 +7,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
 public class CriaPecaDTo {
 
-
     private Long codBarras;
 
     @Id
-    private int id;
+    private Long id;
 
     @NotBlank
     private String nome;
@@ -26,26 +27,28 @@ public class CriaPecaDTo {
     @NotBlank
     private String fabricante;
 
-
     @NotNull(message = "Preço de custo não pode ser nulo")
     private Double precoDeCusto;
 
     @NotNull(message = "Preço de venda não pode ser nulo")
     private Double precoDeVenda;
 
-
     private int qtdeEstoque;
-
 
     @NotBlank
     private String categoria;
 
+    public Peca toEntity(){
+        Peca peca = new Peca();
+        BeanUtils.copyProperties(this, peca);
+        return peca;
+    }
 
-    public CriaPecaDTo(int id, Long codBarras, String nome, String modelo,
-                       String fabricante, Double precoDeCusto,
-                       Double precoDeVenda, int qtdeEstoque,
-                       String categoria) {
+    public CriaPecaDTo(Long codBarras, Long id, String nome, String modelo,
+                       String fabricante, Double precoDeCusto, Double precoDeVenda,
+                       int qtdeEstoque, String categoria) {
         this.codBarras = codBarras;
+        this.id = id;
         this.nome = nome;
         this.modelo = modelo;
         this.fabricante = fabricante;
@@ -53,13 +56,6 @@ public class CriaPecaDTo {
         this.precoDeVenda = precoDeVenda;
         this.qtdeEstoque = qtdeEstoque;
         this.categoria = categoria;
-        this.id = id;
-    }
-
-    public Peca toEntity(){
-        Peca peca = new Peca();
-        BeanUtils.copyProperties(this, peca);
-        return peca;
     }
 
     public Long getCodBarras() {
@@ -68,6 +64,14 @@ public class CriaPecaDTo {
 
     public void setCodBarras(Long codBarras) {
         this.codBarras = codBarras;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -124,13 +128,5 @@ public class CriaPecaDTo {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

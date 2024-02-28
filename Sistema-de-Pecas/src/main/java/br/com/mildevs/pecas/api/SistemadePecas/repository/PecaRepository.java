@@ -15,7 +15,11 @@ import java.util.Optional;
 @Repository
 public interface PecaRepository extends JpaRepository<Peca, Long> {
 
-    Optional<Peca> findBycodBarras(Long codBarras);
+    Optional<Peca> findByCodBarras(Long codBarras);
+
+    Boolean existsByCodBarras(Long codBarras);
+
+    void deleteByCodBarras(Long codBarras);
 
     Optional<Peca> findByModelo(String modelo);
 

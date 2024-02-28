@@ -18,7 +18,7 @@ import java.util.Optional;
 public class PecaService {
 
     @Autowired
-    PecaRepository pecaRepository;
+    private PecaRepository pecaRepository;
 
     //Create
     public Object inserePeca(CriaPecaDTo pecaDTo) throws ErroDeNegocioException {
@@ -32,8 +32,7 @@ public class PecaService {
 
     //Read
     public Peca consultaPeca(Long codBarras){
-        Optional<Peca> pecaDb = pecaRepository.findBycodBarras(codBarras);
-                //findById(codBarras);
+        Optional<Peca> pecaDb = pecaRepository.findByCodBarras(codBarras);
 
         if(pecaDb.isEmpty()){
             return null;
@@ -42,8 +41,8 @@ public class PecaService {
         return pecaDb.get();
     }
 
-    public Optional<Peca> consultaPecaPorModelo(String modelo){
-        return Optional.of(pecaRepository.findByModelo(modelo).get());
+    public Peca consultaPecaPorModelo(String modelo){
+        return pecaRepository.findByModelo(modelo).get();
     }
 
     public List<Peca> listaPecas(){
@@ -52,7 +51,8 @@ public class PecaService {
 
     //Update
     public boolean alteraPeca(Peca peca){
-        if(!pecaRepository.existsById(peca.getCodBarras())){
+
+        if(!pecaRepository.existsByCodBarras(peca.getCodBarras())){
             return false;
         }
 
@@ -62,13 +62,13 @@ public class PecaService {
 
     //Delete
     public boolean removePeca(Long codBarras){
-        if(!pecaRepository.existsById(codBarras)){
+
+        if(!pecaRepository.existsByCodBarras(codBarras)){
             return false;
         }
 
-        pecaRepository.deleteById(codBarras);
+        pecaRepository.deleteByCodBarras(codBarras);
         return true;
     }
-
 
 }

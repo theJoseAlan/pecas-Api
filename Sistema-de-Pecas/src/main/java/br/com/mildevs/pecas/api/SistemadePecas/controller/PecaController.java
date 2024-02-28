@@ -29,13 +29,13 @@ public class PecaController {
 
     //Buscando por codBarras
     @GetMapping(path = "/{codBarras}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Peca buscaPeca(@PathVariable long codBarras){
+    public Peca buscaPeca(@PathVariable Long codBarras){
         return pecaService.consultaPeca(codBarras);
     }
 
     //Buscando por modelo de carro
     @GetMapping(path = "modelo/{modelo}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Peca> buscaPecaPorModelo(@PathVariable String modelo){
+    public Peca buscaPecaPorModelo(@PathVariable String modelo){
         return pecaService.consultaPecaPorModelo(modelo);
     }
 

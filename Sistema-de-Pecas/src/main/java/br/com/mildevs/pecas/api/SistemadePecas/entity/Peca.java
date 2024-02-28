@@ -3,6 +3,9 @@ package br.com.mildevs.pecas.api.SistemadePecas.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serial;
 
@@ -11,11 +14,9 @@ import java.io.Serial;
 @Entity
 public class Peca {
 
-
     @Column
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private Long codBarras;
@@ -38,19 +39,15 @@ public class Peca {
     @Column(name = "qtde_estoque", nullable = false)
     private int qtdeEstoque;
 
-
     @Column(nullable = false)
     private String categoria;
 
-    public Peca(){
+    public Peca(){}
 
-    }
-
-    public Peca(int id, Long codBarras, String nome, String modelo,
-                String fabricante, Double precoDeCusto,
-                Double precoDeVenda, int qtdeEstoque,
-                String categoria) {
-
+    public Peca(Long id, Long codBarras, String nome, String modelo,
+                String fabricante, Double precoDeCusto, Double precoDeVenda,
+                int qtdeEstoque, String categoria) {
+        this.id = id;
         this.codBarras = codBarras;
         this.nome = nome;
         this.modelo = modelo;
@@ -59,6 +56,14 @@ public class Peca {
         this.precoDeVenda = precoDeVenda;
         this.qtdeEstoque = qtdeEstoque;
         this.categoria = categoria;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getCodBarras() {
@@ -123,13 +128,5 @@ public class Peca {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }
