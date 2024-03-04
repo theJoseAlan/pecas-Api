@@ -27,6 +27,14 @@ public class PecaController {
         return pecaService.inserePeca(peca);
     }
 
+    @PutMapping("/atualizar/{id}")
+    public Peca atualizar(@PathVariable Long id, @RequestBody Peca peca) throws ErroDeNegocioException {
+
+        Peca pecaAtualizada = pecaService.atualizarPeca(peca, id);
+
+        return pecaAtualizada;
+    }
+
     //Buscando por codBarras
     @GetMapping(path = "/{codBarras}", produces = {MediaType.APPLICATION_JSON_VALUE})
     public Peca buscaPeca(@PathVariable Long codBarras){

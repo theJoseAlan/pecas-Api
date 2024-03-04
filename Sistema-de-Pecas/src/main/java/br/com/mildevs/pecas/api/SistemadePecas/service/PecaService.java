@@ -1,5 +1,7 @@
 package br.com.mildevs.pecas.api.SistemadePecas.service;
 
+import br.com.mildevs.pecas.api.SistemadePecas.assembler.PecaAssembler;
+import br.com.mildevs.pecas.api.SistemadePecas.dto.*;
 import br.com.mildevs.pecas.api.SistemadePecas.dto.CriaPecaDTo;
 import br.com.mildevs.pecas.api.SistemadePecas.entity.Peca;
 import br.com.mildevs.pecas.api.SistemadePecas.exceptions.ErroDeNegocioException;
@@ -20,6 +22,8 @@ public class PecaService {
 
     @Autowired
     private PecaRepository pecaRepository;
+
+    private PecaAssembler pecaAssembler;
 
     //Create
     public Object inserePeca(CriaPecaDTo pecaDTo) throws ErroDeNegocioException {
@@ -51,14 +55,16 @@ public class PecaService {
     }
 
     //Update
-    public boolean alteraPeca(Peca peca){
+    public Peca atualizarPeca(Peca peca, Long id) throws ErroDeNegocioException{
 
-        if(!pecaRepository.existsByCodBarras(peca.getCodBarras())){
-            return false;
+        Optional<Peca> pecaOptional = pecaRepository.findById(id);
+
+        if(pecaOptional.isEmpty()){
+            throw new ErroDeNegocioException("Peça não encontrada para o id fornecido");
         }
 
-        pecaRepository.save(peca);
-        return true;
+        return pecaRepository.save(peca);
+
     }
 
     //Delete
