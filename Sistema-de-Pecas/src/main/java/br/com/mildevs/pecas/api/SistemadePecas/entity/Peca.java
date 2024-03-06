@@ -18,7 +18,7 @@ public class Peca {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private Long codBarras;
 
     @Column(nullable = false)

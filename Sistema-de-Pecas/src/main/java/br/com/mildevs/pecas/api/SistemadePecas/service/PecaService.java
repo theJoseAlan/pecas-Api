@@ -63,6 +63,16 @@ public class PecaService {
             throw new ErroDeNegocioException("Peça não encontrada para o id fornecido");
         }
 
+        List<Peca> todasAsPecas = pecaRepository.findAll();
+
+        int qtdePecasComMesmoCodBarras = (int)todasAsPecas
+                .stream()
+                .filter(pecaEncontrada -> pecaEncontrada.getCodBarras().equals(peca.getCodBarras())).count();
+
+        if(qtdePecasComMesmoCodBarras >= 1){
+            throw new ErroDeNegocioException("Já existe um produto com esse código de barras");
+        }
+
         return pecaRepository.save(peca);
 
     }

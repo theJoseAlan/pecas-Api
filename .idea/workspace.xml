@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c836ea0-7713-45e6-bae8-165af2773b00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/assembler/PecaAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/commom/ModelMapperConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/controller/PecaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/entity/Peca.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/entity/Peca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sistema-de-Pecas/src/main/java/br/com/mildevs/pecas/api/SistemadePecas/service/PecaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +42,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alan Sales/Documents/Projetos-Git/spring-transferbank&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Alan Sales/Documents/Projetos-Git/spring-transferbank",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.mildevs.pecas.api.SistemadePecas.dto" />
