@@ -35,7 +35,8 @@ public class PecaService {
 
         int qtdePecasComMesmoCodBarras = (int)todasAsPecas
                 .stream()
-                .filter(pecaEncontrada -> pecaEncontrada.getCodBarras().equals(peca.getCodBarras())).count();
+                .filter(pecaEncontrada -> pecaEncontrada.getCodBarras()
+                        .equals(peca.getCodBarras())).count();
 
         if(qtdePecasComMesmoCodBarras >= 1){
             throw new ErroDeNegocioException("Já existe um produto com esse código de barras");
@@ -79,9 +80,11 @@ public class PecaService {
                 .stream()
                 .filter(pecaEncontrada -> pecaEncontrada.getCodBarras().equals(peca.getCodBarras())).count();
 
-        if(qtdePecasComMesmoCodBarras >= 1){
+        if(qtdePecasComMesmoCodBarras > 1){
             throw new ErroDeNegocioException("Já existe um produto com esse código de barras");
         }
+
+        peca.setId(pecaOptional.get().getId());
 
         return pecaRepository.save(peca);
 
@@ -92,7 +95,6 @@ public class PecaService {
     public boolean removePeca(Long codBarras){
 
         if(!pecaRepository.existsByCodBarras(codBarras)){
-            System.out.println("Caiu aqui");
             return false;
         }
 
